@@ -1,4 +1,4 @@
-pip install matplotlib
+subprocess.call([sys.executable, '-m', 'pip', 'install', 'matplotlib'])
 # standard imports
 import streamlit as st
 import numpy as np
