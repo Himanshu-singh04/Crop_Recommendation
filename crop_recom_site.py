@@ -1,4 +1,4 @@
-subprocess.call([sys.executable, '-m', 'pip', 'install', 'matplotlib'])
+subprocess.check_call([sys.executable, "-m", "pip", "install", 'matplotlib'])
 # standard imports
 import streamlit as st
 import numpy as np
