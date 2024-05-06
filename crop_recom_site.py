@@ -275,19 +275,17 @@ with tab2:
     model_name.append("Neural Network")
     accuracy_of_model.append(score_8*100)
 
-    fig = plt.figure(figsize=(20, 5))
-
-    # plotting accuracy of different model in same graph
-    plt.title('Accuracy Comparison of Different Models')
-    plt.ylabel('Algorithm')
-    plt.xlabel('Accuracy in %')
-    plt.xticks(range(0, 101, 10))
-
-    compare = sns.barplot(y=model_name, x=accuracy_of_model)
-
     if st.checkbox('Compare Model Accuracy'):
-        st.pyplot(compare.figure)
+        fig = plt.figure(figsize=(20, 5))
+        # plotting accuracy of different model in same graph
+        plt.title('Accuracy Comparison of Different Models')
+        plt.ylabel('Algorithm')
+        plt.xlabel('Accuracy in %')
+        plt.xticks(range(0, 101, 10))
 
+        compare = sns.barplot(y=model_name, x=accuracy_of_model)
+        st.pyplot(compare.figure)
+        
     if st.checkbox('Display Model Accuracy'):
         st.write('Model Accuracy on test data:', score_3*100)
 
