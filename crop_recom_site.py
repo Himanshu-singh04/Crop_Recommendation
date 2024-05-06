@@ -1,3 +1,4 @@
+pip install matplotlib
 # standard imports
 import streamlit as st
 import numpy as np
